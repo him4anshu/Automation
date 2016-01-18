@@ -1,0 +1,95 @@
+USER@USER-PC MINGW32 /d/git/hungermeals (master)
+$ git push origin master
+Counting objects: 841, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (817/817), done.
+Writing objects: 100% (841/841), 76.69 MiB | 61.00 KiB/s, done.
+Total 841 (delta 102), reused 0 (delta 0)
+To https://github.com/him4anshu/hungermeals.git
+ * [new branch]      master -> master
+
+USER@USER-PC MINGW32 /d/git/hungermeals (master)
+$ cd D:/vvi_workspace/HM/dev_v1/build/deploy
+
+USER@USER-PC MINGW32 /d/vvi_workspace/HM/dev_v1/build/deploy
+$ scp fidloo.jar hmeals@104.238.96.134
+cp: cannot stat ‘fidloo.jar’: No such file or directory
+
+
+
+USER@USER-PC MINGW32 /d/vvi_workspace/HM/dev_v1/build/deploy
+$
+
+USER@USER-PC MINGW32 /d/vvi_workspace/HM/dev_v1/build/deploy
+$
+
+USER@USER-PC MINGW32 /d/vvi_workspace/HM/dev_v1/build/deploy
+$ scp fidloo.jar hmeals@104.238.96.134:/usr/local/easy/share/easy-tomcat7/webapps/hungermeals/WEB-INF/lib/
+The authenticity of host '104.238.96.134 (104.238.96.134)' can't be established.
+RSA key fingerprint is SHA256:R0Wzw4nu+ko/G13Og1JgIViSkSAGk/Wzg9y2eRSsgU0.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '104.238.96.134' (RSA) to the list of known hosts.
+hmeals@104.238.96.134's password:
+stdin: is not a tty
+fidloo.jar: No such file or directory
+
+USER@USER-PC MINGW32 /d/vvi_workspace/HM/dev_v1/build/deploy
+$ scp fidloo_core.jar hmeals@104.238.96.134:/usr/local/easy/share/easy-tomcat7/webapps/hungermeals/WEB-INF/lib/
+hmeals@104.238.96.134's password:
+stdin: is not a tty
+fidloo_core.jar                                                                                                                                   100%   56KB  56.2KB/s   00:00
+
+USER@USER-PC MINGW32 /d/vvi_workspace/HM/dev_v1/build/deploy
+$ ssh hmeals@104.238.96.134 "pushd /usr/local/easy/share/easy-tomcat7/bin;./shutdown.sh;popd"
+hmeals@104.238.96.134's password:
+stdin: is not a tty
+bash: line 0: pushd: /usr/local/easy/share/easy-tomcat7/bin: No such file or directory
+bash: ./shutdown.sh: No such file or directory
+bash: line 0: popd: directory stack empty
+
+USER@USER-PC MINGW32 /d/vvi_workspace/HM/dev_v1/build/deploy
+$ cd -
+/d/git/hungermeals
+
+USER@USER-PC MINGW32 /d/git/hungermeals (master)
+$ cd ..
+
+USER@USER-PC MINGW32 /d/git
+$ git clone https://github.com/him4anshu/Automation.git
+Cloning into 'Automation'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+
+USER@USER-PC MINGW32 /d/git
+$ cd Automation/
+
+USER@USER-PC MINGW32 /d/git/Automation (master)
+$ git add .
+
+USER@USER-PC MINGW32 /d/git/Automation (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   autoDeploy.sh
+
+
+USER@USER-PC MINGW32 /d/git/Automation (master)
+$ git commit -m "Deployment script"
+[master (root-commit) c0e0e82] Deployment script
+ 1 file changed, 45 insertions(+)
+ create mode 100644 autoDeploy.sh
+
+USER@USER-PC MINGW32 /d/git/Automation (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 773 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/him4anshu/Automation.git
+ * [new branch]      master -> master
